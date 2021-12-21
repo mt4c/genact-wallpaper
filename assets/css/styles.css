@@ -1,3 +1,24 @@
+@font-face {
+    font-family: "win95";
+    src: url(../fonts/W95FA.otf);
+}
+
+:root {
+    --c1: #0f0;
+}
+
+@property --outrun {
+    syntax: "<number>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@keyframes outrun {
+    to {
+        --outrun: 1;
+    }
+}
+
 html,
 body {
     background-color: #000;
@@ -11,11 +32,107 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/bg.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    color: #00ff00;
     filter: brightness(0.2);
+    animation: outrun 1s linear infinite;
+    --lgDepth: url('data:image/svg+xml;utf8,<svg width="1808" height="230" xmlns="http://www.w3.org/2000/svg"><path d="M904 -46 L-3616 230 M904 -46 L-3254.4 230 M904 -46 L-2892.8 230 M904 -46 L-2531.2000000000003 230 M904 -46 L-2169.6000000000004 230 M904 -46 L-1808 230 M904 -46 L-1446.4 230 M904 -46 L-1084.8000000000002 230 M904 -46 L-723.2 230 M904 -46 L-361.6 230 M904 -46 L0 230 M904 -46 L361.6 230 M904 -46 L723.2 230 M904 -46 L1084.8000000000002 230 M904 -46 L1446.4 230 M904 -46 L1808 230 M904 -46 L2169.6000000000004 230 M904 -46 L2531.2000000000003 230 M904 -46 L2892.8 230 M904 -46 L3254.4 230 M904 -46 L3616 230 M904 -46 L3977.6000000000004 230 M904 -46 L4339.200000000001 230 M904 -46 L4700.8 230 M904 -46 L5062.400000000001 230 M904 -46 L5424 230" stroke="lime" stroke-width="5" vector-effect="non-scaling-stroke" /></svg>')
+        left bottom / 100% 40% no-repeat;
+    --outrun: 0;
+    --pos: var(--outrun, 0);
+    --distance: 0.5%;
+    --hor: 60%;
+    --l0: var(--hor) + 0 * 0 * var(--distance) +
+        (((0 + 1) * (0 + 1) * var(--distance) - 0 * 0 * var(--distance)) * var(--pos));
+    --l1: var(--hor) + 1 * 1 * var(--distance) +
+        (((1 + 1) * (1 + 1) * var(--distance) - 1 * 1 * var(--distance)) * var(--pos));
+    --l2: var(--hor) + 2 * 2 * var(--distance) +
+        (((2 + 1) * (2 + 1) * var(--distance) - 2 * 2 * var(--distance)) * var(--pos));
+    --l3: var(--hor) + 3 * 3 * var(--distance) +
+        (((3 + 1) * (3 + 1) * var(--distance) - 3 * 3 * var(--distance)) * var(--pos));
+    --l4: var(--hor) + 4 * 4 * var(--distance) +
+        (((4 + 1) * (4 + 1) * var(--distance) - 4 * 4 * var(--distance)) * var(--pos));
+    --l5: var(--hor) + 5 * 5 * var(--distance) +
+        (((5 + 1) * (5 + 1) * var(--distance) - 5 * 5 * var(--distance)) * var(--pos));
+    --l6: var(--hor) + 6 * 6 * var(--distance) +
+        (((6 + 1) * (6 + 1) * var(--distance) - 6 * 6 * var(--distance)) * var(--pos));
+    --l7: var(--hor) + 7 * 7 * var(--distance) +
+        (((7 + 1) * (7 + 1) * var(--distance) - 7 * 7 * var(--distance)) * var(--pos));
+    --l8: var(--hor) + 8 * 8 * var(--distance) +
+        (((8 + 1) * (8 + 1) * var(--distance) - 8 * 8 * var(--distance)) * var(--pos));
+    --l9: var(--hor) + 9 * 9 * var(--distance) +
+        (((9 + 1) * (9 + 1) * var(--distance) - 9 * 9 * var(--distance)) * var(--pos));
+    --lgh: linear-gradient(
+        transparent 0px var(--hor),
+        var(--c1) var(--hor) calc(var(--hor) + 5px),
+        transparent calc(var(--hor) + 5px)
+    );
+    --lg0: linear-gradient(
+        transparent 0px calc(var(--l0)),
+        var(--c1) calc(var(--l0)) calc(var(--l0) + 5px),
+        transparent calc(var(--l0) + 5px)
+    );
+    --lg1: linear-gradient(
+        transparent 0px calc(var(--l1)),
+        var(--c1) calc(var(--l1)) calc(var(--l1) + 5px),
+        transparent calc(var(--l1) + 5px)
+    );
+    --lg2: linear-gradient(
+        transparent 0px calc(var(--l2)),
+        var(--c1) calc(var(--l2)) calc(var(--l2) + 5px),
+        transparent calc(var(--l2) + 5px)
+    );
+    --lg3: linear-gradient(
+        transparent 0px calc(var(--l3)),
+        var(--c1) calc(var(--l3)) calc(var(--l3) + 5px),
+        transparent calc(var(--l3) + 5px)
+    );
+    --lg4: linear-gradient(
+        transparent 0px calc(var(--l4)),
+        var(--c1) calc(var(--l4)) calc(var(--l4) + 5px),
+        transparent calc(var(--l4) + 5px)
+    );
+    --lg5: linear-gradient(
+        transparent 0px calc(var(--l5)),
+        var(--c1) calc(var(--l5)) calc(var(--l5) + 5px),
+        transparent calc(var(--l5) + 5px)
+    );
+    --lg6: linear-gradient(
+        transparent 0px calc(var(--l6)),
+        var(--c1) calc(var(--l6)) calc(var(--l6) + 5px),
+        transparent calc(var(--l6) + 5px)
+    );
+    --lg7: linear-gradient(
+        transparent 0px calc(var(--l7)),
+        var(--c1) calc(var(--l7)) calc(var(--l7) + 5px),
+        transparent calc(var(--l7) + 5px)
+    );
+    --lg8: linear-gradient(
+        transparent 0px calc(var(--l8)),
+        var(--c1) calc(var(--l8)) calc(var(--l8) + 5px),
+        transparent calc(var(--l8) + 5px)
+    );
+    --lg9: linear-gradient(
+        transparent 0px calc(var(--l9)),
+        var(--c1) calc(var(--l9)) calc(var(--l9) + 5px),
+        transparent calc(var(--l9) + 5px)
+    );
+    background: var(--lgDepth), var(--lgh), var(--lg0), var(--lg1), var(--lg2), var(--lg3), var(--lg4), var(--lg5),
+        var(--lg6), var(--lg7), var(--lg8), var(--lg9);
+}
+
+.bg-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    font-family: win95;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bg-text p {
+    margin: 0;
 }
 
 #terminal {
