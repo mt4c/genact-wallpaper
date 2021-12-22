@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "win95";
-    src: url(../fonts/W95FA.otf);
+    font-family: "fsex";
+    src: url(../fonts/FSEX302.ttf);
 }
 
 :root {
@@ -122,10 +122,10 @@ body {
 
 .bg-text {
     position: absolute;
-    top: 50%;
+    bottom: 43%;
     left: 0;
     width: 100%;
-    font-family: win95;
+    font-family: fsex;
     font-size: 200%;
     font-weight: bold;
     text-align: center;
